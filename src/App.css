@@ -113,6 +113,46 @@ a.no-click-pagination {
 
 /*************************/
 
+.not-found-main {
+  text-align: center;
+}
+
+/*************************/
+
+.back-to-home-page {
+  margin-left: 10%;
+}
+
+/*************************/
+
+#customers {
+  /* font-family: "Trebuchet MS", Arial, Helvetica, sans-serif; */
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 100px;
+}
+
+#customers td, #customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+  white-space: pre;
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #4CAF50;
+  color: white;
+  text-align: center;
+}
+
+/*************************/
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
