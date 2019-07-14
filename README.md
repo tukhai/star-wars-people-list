@@ -8,25 +8,18 @@ Estimated Duration: 3 days
 
 #### Assignment Details
 You are given 3 days (72 hrs) to complete the task.<br>
-
 Use a state management tool<br>
-
 The code should be in a production-ready state<br>
-
 
 Your submission will be judged on - <br>
 1. Code quality (https://www.perforce.com/blog/qac/what-code-quality-and-how-improve-it)<br>
 2. Tooling choices<br>
 
 Basic features of the application should include:<br>
-
-View all people in the Star Wars universe.<br>
-
-View the details of every person in the Star Wars universe.<br>
-
-/people should display all people<br>
-
-/people/:personId should display a person by id in detail<br>
+- View all people in the Star Wars universe.<br>
+- View the details of every person in the Star Wars universe.<br>
+- /people should display all people<br>
+- /people/:personId should display a person by id in detail<br>
 
 
 ## Project Accessing
