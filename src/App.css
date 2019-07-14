@@ -130,6 +130,7 @@ a.no-click-pagination {
   border-collapse: collapse;
   width: 100%;
   margin-bottom: 100px;
+  table-layout: fixed;
 }
 
 #customers td, #customers th {
@@ -149,6 +150,13 @@ a.no-click-pagination {
   background-color: #4CAF50;
   color: white;
   text-align: center;
+}
+
+@media screen and (max-width: 767px) {
+  #customers td, #customers th {
+    white-space: normal;
+    word-break: break-word;
+  }
 }
 
 /*************************/
