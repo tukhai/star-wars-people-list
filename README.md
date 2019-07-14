@@ -26,7 +26,7 @@ Basic features of the application should include:<br>
 
 ### Deployment
 
-This project has been deployed at: [https://github-repo-searching-app.herokuapp.com/](https://github-repo-searching-app.herokuapp.com/) <br>
+This project has been deployed at: [https://star-wars-production-app.herokuapp.com/people](https://star-wars-production-app.herokuapp.com/people) <br>
 Please visit the url to access the project.
 
 ### Project clone
@@ -37,7 +37,7 @@ In the project root directory, you can run it in 1 of the following modes: <br>
 `npm start`
 
 Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Open [http://localhost:3000/people](http://localhost:3000/people) to view it in the browser.
 
 The page will reload if you make edits.<br>
 You will also see any lint errors in the console.
@@ -60,7 +60,7 @@ Calling the /people API but there are only 10 items for each call. This is to re
 Just simply calling /people/:personId api and render the data into a simple table.
 
 ### React-router & localStorage
-In this application, react-router is used to route between our main page and detail page. <br><br>
+In this application, react-router is used to route between our main page and detail page. <br>
 
 If from main page, we click to the pagination (for example page no.3), then we click to an item on page no.3, we'll be redirected to /people-details page. Then, if we click to "back" button of browser, we'll be back to main page, but on page no.1 not page no.3, which is not a great User Experience.<br>
 To solve this issue, we simply save data of current page into localStorage.
