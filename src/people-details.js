@@ -61,7 +61,7 @@ class PackageOverview extends React.Component {
 
     return (
       <div className="App">
-        <h4 className="back-to-home-page"><Link to="/">PEOPLE LIST</Link></h4>
+        <h4 className="back-to-home-page"><Link to="/people">PEOPLE LIST</Link></h4>
 
         <div className="main-container">
           {this.state.isShowLoadingText ?

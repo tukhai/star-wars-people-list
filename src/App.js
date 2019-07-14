@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 
 import PeopleList from './components/PeopleList.js';
@@ -8,10 +7,20 @@ import Pagination from './components/Pagination.js';
 class App extends Component {
   constructor(props) {
     super(props);
+
+    var currentPageFromLocalStorage = 1;
+    if (localStorage.getItem('currentPage') !== null && 
+      parseInt(localStorage.getItem('currentPage')) &&
+      Number.isInteger(parseInt(localStorage.getItem('currentPage')))
+      ) {
+      currentPageFromLocalStorage = parseInt(localStorage.getItem('currentPage'));
+    }
+
     this.state = {
       peopleListData: [],
       listCount: 0,
-      isShowLoadingText: true
+      isShowLoadingText: true,
+      currentPage: currentPageFromLocalStorage
     }
     this.handleChangePage = this.handleChangePage.bind(this);
   }
@@ -25,6 +34,8 @@ class App extends Component {
       isShowLoadingText: true
     });
 
+    localStorage.setItem('currentPage', page);
+
     this.callApi(page);
   }
 
@@ -37,7 +48,6 @@ class App extends Component {
     })
     .then((response) => response.json())
     .then((responseJson) => {
-      console.log(responseJson);
       var dataList = [];
       var dataCount = 0;
       if (responseJson && responseJson.results && responseJson.count > 0) {
@@ -57,7 +67,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-    this.callApi(1);
+    this.callApi(this.state.currentPage);
   }
 
   render() {

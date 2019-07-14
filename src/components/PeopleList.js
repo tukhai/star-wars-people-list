@@ -17,7 +17,7 @@ class PeopleList extends React.Component {
         var personId = i.url ? i.url.replace("https://swapi.co/api/people/", "").replace("/", "") : "";
         return (
           <li key={index}>
-            <a href={i.url} target="_blank" rel="noopener noreferrer">
+            <a href={`/people-details/${personId}`}>
               {personId !== "" ? personId : "_"}. {i.name}
             </a>
           </li>
