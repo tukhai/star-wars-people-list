@@ -1,10 +1,47 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Introduction
 
-## Available Scripts
+This project is a part of the Front End Engineer Test.
 
-In the project directory, you can run:
+#### Scope of Assignment
+With API from swapi.co, build a single page application where users can view the details about all the people in the Star Wars Universe.<br>
+Estimated Duration: 3 days
 
-### `npm start`
+#### Assignment Details
+You are given 3 days (72 hrs) to complete the task.<br>
+
+Use a state management tool<br>
+
+The code should be in a production-ready state<br>
+
+
+Your submission will be judged on - <br>
+1. Code quality (https://www.perforce.com/blog/qac/what-code-quality-and-how-improve-it)<br>
+2. Tooling choices<br>
+
+Basic features of the application should include:<br>
+
+View all people in the Star Wars universe.<br>
+
+View the details of every person in the Star Wars universe.<br>
+
+/people should display all people<br>
+
+/people/:personId should display a person by id in detail<br>
+
+
+## Project Accessing
+
+### Deployment
+
+This project has been deployed at: [https://github-repo-searching-app.herokuapp.com/](https://github-repo-searching-app.herokuapp.com/) <br>
+Please visit the url to access the project.
+
+### Project clone
+Alternatively, you can clone this project code. <br>
+Make sure node and npm are installed in your local machine: `brew install node` <br><br>
+In the project root directory, you can run it in 1 of the following modes: <br>
+
+`npm start`
 
 Runs the app in the development mode.<br>
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
@@ -12,12 +49,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.<br>
 You will also see any lint errors in the console.
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
+`npm run build`
 
 Builds the app for production to the `build` folder.<br>
 It correctly bundles React in production mode and optimizes the build for the best performance.
@@ -25,44 +57,20 @@ It correctly bundles React in production mode and optimizes the build for the be
 The build is minified and the filenames include the hashes.<br>
 Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+## Explaination
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Main page (/people)
+Calling the /people API but there are only 10 items for each call. This is to reduce loading time, and make the landing page looks nicer. The rest of the items could be accessed if clicking to pagination.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Detail page (/people-details)
+Just simply calling /people/:personId api and render the data into a simple table.
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### React-router & localStorage
+In this application, react-router is used to route between our main page and detail page. <br><br>
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+If from main page, we click to the pagination (for example page no.3), then we click to an item on page no.3, we'll be redirected to /people-details page. Then, if we click to "back" button of browser, we'll be back to main page, but on page no.1 not page no.3, which is not a great User Experience.<br>
+To solve this issue, we simply save data of current page into localStorage.
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+### Mobile responsive
+This web app is optimize for both mobile and desktop screen.
